@@ -1,0 +1,2 @@
+include ':app', ':emailer'
+rootProject.name='eMailerExample'
