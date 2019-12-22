@@ -14,6 +14,6 @@ Add it in your root build.gradle at the end of repositories:
   Add the dependency:
   
   	dependencies {
-	        implementation 'com.github.cyberman-io:eMailer:v1.0'
+	        implementation 'com.github.cyberman-io:eMailer:1.0.0'
 	}
   
