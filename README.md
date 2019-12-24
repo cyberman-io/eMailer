@@ -52,7 +52,35 @@
 	set message data:
 
 		message.setSubject(subject);
+
         	message.setText(messageText);
+
         	message.setSenderName(optional_name);
 		
+7. set message to session:
+
+		session.setMessage(eMessage);
+
+8. set OnCompleteListener:
 		
+		session.setOnCompleteListener(new SmtpSession.OnCompleteListener() {
+            		@Override
+            		public void onSendSuccess() {
+				//your code.
+            		}
+
+            		@Override
+            		public void onServerError(int responseCode, String responseMessage) {
+				//your code.
+            		}
+
+            		@Override
+            		public void onError(Exception e) {
+				//your code.
+            		}
+        	});
+
+9. send message:
+
+		  session.send();
+
