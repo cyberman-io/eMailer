@@ -47,7 +47,13 @@
 
 6. create a new Message Object:
 
-		 PlainTextMessage message = new PlainTextMessage(sender_email,recipient_email);
+		PlainTextMessage message = new PlainTextMessage(sender_email,recipient_email);
+		 
+	or if you want to add an attachments (files):
+	
+		Attachment attachment = new Attachment(file_path);
+		
+		AttachmentMessage message = new AttachmentMessage(sender_email,recipient_email,attachment);
 
 	set message data:
 
@@ -59,7 +65,7 @@
 		
 7. set message to session:
 
-		session.setMessage(eMessage);
+		session.setMessage(message);
 
 8. set OnCompleteListener:
 		
