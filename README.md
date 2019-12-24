@@ -16,8 +16,8 @@
   		dependencies {
 	        	implementation 'com.github.cyberman-io:eMailer:1.0.0'
 		}
-	
-1. create a new SmtpSession:
+
+3. create a new SmtpSession:
 
  		SmtpSession session = new SmtpSession(smtp_host_address);
  
@@ -28,5 +28,31 @@
  	ex:
  
  		SmtpSession session = new SmtpSession("smtp.yandex.com",465);
- 
- 
+
+4. enable encryption protocol:
+
+		session.enableStartTLS();
+
+	or:
+
+		session.enableSSL();
+
+5. set authentication mechanisme and authentication info:
+
+		session.useAuthentication(new LoginAuthentication(user_name,user_password));
+
+	or:
+
+		session.useAuthentication(new PlainAuthentication(user_name,user_password));
+
+6. create a new Message Object:
+
+		 PlainTextMessage message = new PlainTextMessage(sender_email,recipient_email);
+
+	set message data:
+
+		message.setSubject(subject);
+        	message.setText(messageText);
+        	message.setSenderName(optional_name);
+		
+		
