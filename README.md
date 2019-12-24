@@ -16,17 +16,17 @@ Add it in your root build.gradle at the end of repositories:
   	dependencies {
 	        implementation 'com.github.cyberman-io:eMailer:1.0.0'
 	}
-  
+	
 1. create a new SmtpSession:
 
- 	SmtpSession session = new SmtpSession(smtp_host_address);
+ 		SmtpSession session = new SmtpSession(smtp_host_address);
  
- or:
+ 	or:
  
- 	SmtpSession session = new SmtpSession(smtp_host_address,smtp_host_prot);
+ 		SmtpSession session = new SmtpSession(smtp_host_address,smtp_host_prot);
  
- ex:
+ 	ex:
  
- 	SmtpSession session = new SmtpSession("smtp.yandex.com",465);
+ 		SmtpSession session = new SmtpSession("smtp.yandex.com",465);
  
  
